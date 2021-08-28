@@ -1,8 +1,15 @@
-export default function Button() {
-    return (
-      <div>
-        <h1>Button</h1>
-      </div>
-    );
+import React from "react";
+import "./Button.css"
+
+class Button extends React.Component {
+  render() {
+    return(
+      <button className={this.props.secondary ? "secondary" : "primary"}>
+        {this.props.text}
+      </button>
+    )
   }
+}
+
+export default Button;
   

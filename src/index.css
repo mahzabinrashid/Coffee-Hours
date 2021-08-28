@@ -3,6 +3,8 @@
 
 :root {
   --light-green: #E4EEEA;
+  --dark-green: #386150;
+  --shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 * {
