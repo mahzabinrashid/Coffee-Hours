@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
-import ProfilePic from "../UI-components/ProfilePicture";
 import Button from "../UI-components/Button.js";
 import "./Navbar.css"
 import logo from "./logo_transparent.png"

@@ -1,5 +1,9 @@
 import { useState } from "react";
 import fire from "../../fire";
+import { Input } from "semantic-ui-react";
+import "./CommunityHubPost.scss";
+import ProfilePic from "../UI-components/ProfilePicture";
+import Button from "../UI-components/Button.js";
 
 export default function CommunityHubPost() {
   const [enteredComment, setEnteredComment] = useState("");
@@ -32,20 +36,27 @@ export default function CommunityHubPost() {
     }
   });
   return (
-    <div>
+    <div className="hub_post">
       <h1>Community Hub Post</h1>
+
       {auth && (
         <form onSubmit={formSubmission}>
-          <div>
-            <label>Comment</label>
-            <input
+          <div className="comment">
+            <label className="pic">
+              <ProfilePic name={name} />
+            </label>
+
+            <textarea
               type="text"
               id="comment"
+              placeholder="type here..."
               onChange={commentInputChangeHandler}
-            ></input>
+              cols="95"
+              rows="5"
+            ></textarea>
           </div>
-          <div>
-            <button>Submit</button>
+          <div class="btn">
+            <Button text="Submit" />
           </div>
         </form>
       )}

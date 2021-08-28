@@ -1,12 +1,9 @@
-import Test from "../components/university/CommunityHubGallery"
-import Test2 from "../components/university/CommunityHubPost"
+import CommunityHub from "../components/university/CommunityHub";
 export default function UniversityOfWaterloo() {
-    return (
-      <div>
-        <h1>University of Waterloo</h1>
-        <Test/>
-        <Test2/>
-      </div>
-    );
-  };
-  
+  return (
+    <div>
+      <h1>University of Waterloo</h1>
+      <CommunityHub />
+    </div>
+  );
+}
