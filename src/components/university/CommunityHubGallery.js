@@ -20,7 +20,7 @@ export default function CommunityHubGallery() {
             <div>
               <p> {val.data().name} </p>
               <p> {val.data().comment} </p>
-              <ProfilePic name={val.data().comment}/>
+              <ProfilePic name={val.data().name}/>
             </div>
           );
         })}
