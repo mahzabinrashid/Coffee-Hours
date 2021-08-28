@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
+import Button from "../UI-components/Button.js";
+import "./Navbar.css"
+import logo from "./logo_transparent.png"
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
-  const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
 
   const handleLogout = () => {
     fire.auth().signOut();
@@ -22,7 +25,7 @@ export default function Navbar() {
           .get()
           .then((doc) => {
             // we can get other user info in a similar way (ser SignUp.js component for other key-value pairs)
-            setFirstName(doc.data().firstName);
+            setName(`${doc.data().firstName} ${doc.data().lastName}`);
           });
       } else {
         setAuth(false);
@@ -36,14 +39,20 @@ export default function Navbar() {
 
   return (
     <nav>
-      <p>{auth && firstName}</p>
-      <Link to="/">Home</Link>
-      {!auth && <Link to="/signin">Sign In</Link>}
-      {auth && (
-        <Link to="/" onClick={handleLogout}>
-          Sign Out
-        </Link>
-      )}
+      <span className="left">
+        <Link to="/"><img src={logo} /> Coffee Hours</Link>
+      </span>
+      <span className="right">
+        {auth ? <>
+                  <Button text="test" />
+                </>
+              : <>
+              <Link to="/signup"><Button text="Sign Up" /></Link>
+                <Link to="/signin"><Button text="Log In" secondary /></Link>
+              </>}
+      </span>
+      
+      {/* <Link to="/" onClick={handleLogout}>Sign Out</Link> */}
     </nav>
   );
 }
