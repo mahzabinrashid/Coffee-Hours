@@ -28,6 +28,29 @@ const institutionOptions = [
   }
 ]
 
+const educationOptions = [
+  {
+    key: 'hs',
+    value: 'hs',
+    text: 'High School'
+  },
+  {
+    key: 'uni',
+    value: 'uni',
+    text: 'Undergrad'
+  },
+  {
+    key: 'mas',
+    value: 'mas',
+    text: 'Masters'
+  },
+  {
+    key: 'other',
+    value: 'other',
+    text: 'Other'
+  }
+]
+
 const motivationOptions = [
   {
     key: 'a',
@@ -116,7 +139,7 @@ export default function SignUp() {
       <form onSubmit={formSubmission}>
         <div className="inline group left">
           <label>First Name</label>
-          <Input fluid type="text" onChange={firstNameInputChangeHandler} />
+          <Input fluid type="text" onChange={firstNameInputChangeHandler} required />
         </div>
         <div className="inline group right">
           <label>Last Name</label>
@@ -157,7 +180,12 @@ export default function SignUp() {
         </div>
         <div className="inline group right">
           <label>Level of Education</label>
-          <Input fluid fluid type="text" onChange={gradeInputHandler} required />
+          <Dropdown fluid selection
+            placeholder='Select an answer'
+            options={educationOptions}
+            onChange={gradeInputHandler}
+            required
+          />
         </div>
         <div className="group">
           <label>What do you hope to achieve through Coffee Hours?</label>

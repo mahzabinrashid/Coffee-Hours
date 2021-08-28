@@ -44,15 +44,13 @@ export default function Navbar() {
       </span>
       <span className="right">
         {auth ? <>
-                  <Button text="test" />
+                  <Link to="/" onClick={handleLogout}><Button text="Sign Out" secondary /></Link>
                 </>
               : <>
-              <Link to="/signup"><Button text="Sign Up" /></Link>
-                <Link to="/signin"><Button text="Log In" secondary /></Link>
-              </>}
+                  <Link to="/signup"><Button text="Sign Up" primary /></Link>
+                  <Link to="/signin"><Button text="Log In" secondary /></Link>
+                </>}
       </span>
-      
-      {/* <Link to="/" onClick={handleLogout}>Sign Out</Link> */}
     </nav>
   );
 }
