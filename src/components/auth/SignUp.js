@@ -125,8 +125,7 @@ export default function SignUp() {
         <div className="group">
           <label htmlFor="email">Email</label>
           <Input fluid
-            type="text"
-            id="email"
+            type="email"
             onChange={emailInputChangeHandler}
             required
            />
@@ -134,8 +133,7 @@ export default function SignUp() {
         <div className="group">
           <label htmlFor="password">Password</label>
           <Input fluid
-            type="text"
-            id="password"
+            type="password"
             onChange={passwordInputChangeHandler}
             required
            />
@@ -143,15 +141,14 @@ export default function SignUp() {
         <div className="group">
           <label htmlFor="password">Confirm Password</label>
           <Input fluid
-            type="text"
-            id="password"
+            type="password"
             onChange={passwordInputChangeHandler}
             required
            />
         </div>
         <div className="inline group left">
           <label>Educational Institution</label>
-          <Dropdown fluid multiple search selection
+          <Dropdown fluid search selection
             placeholder='Select an answer'
             options={institutionOptions}
             onChange={schoolInputHandler}
@@ -164,7 +161,7 @@ export default function SignUp() {
         </div>
         <div className="group">
           <label>What do you hope to achieve through Coffee Hours?</label>
-          <Dropdown fluid multiple selection
+          <Dropdown fluid selection
             placeholder='Select an answer'
             options={motivationOptions}
             onChange={bioInputHandler}
@@ -173,7 +170,7 @@ export default function SignUp() {
         </div>
         <div className="group">
           <label>Where did you hear about Coffee Hours?</label>
-          <Dropdown fluid multiple selection
+          <Dropdown fluid selection
             placeholder='Select an answer'
             options={referralOptions}
             // onChange={}
