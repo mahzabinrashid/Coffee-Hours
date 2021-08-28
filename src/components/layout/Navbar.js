@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
+import ProfilePic from "../UI-components/ProfilePicture";
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
-  const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
 
   const handleLogout = () => {
     fire.auth().signOut();
@@ -22,7 +23,7 @@ export default function Navbar() {
           .get()
           .then((doc) => {
             // we can get other user info in a similar way (ser SignUp.js component for other key-value pairs)
-            setFirstName(doc.data().firstName);
+            setName(`${doc.data().firstName} ${doc.data().lastName}`);
           });
       } else {
         setAuth(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <p>{auth && firstName}</p>
+      <p>{auth && name}</p>
       <Link to="/">Home</Link>
       {!auth && <Link to="/signin">Sign In</Link>}
       {auth && (
@@ -44,6 +45,7 @@ export default function Navbar() {
           Sign Out
         </Link>
       )}
+      <ProfilePic name={name}/>
     </nav>
   );
 }
