@@ -1,0 +1,21 @@
+.form {
+  background-color: var(--light-green);
+  padding: 40px 50px;
+}
+
+.form label {
+  display: block;
+}
+
+.form .group {
+  margin-bottom: 20px;
+}
+
+.form .inline.group {
+  display: inline-block;
+  width: calc(50% - 20px);
+}
+
+.form .inline.group.right {
+  float: right;
+}

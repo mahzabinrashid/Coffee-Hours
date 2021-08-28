@@ -1,5 +1,69 @@
+import Button from "../UI-components/Button.js"
+import { Input, Dropdown } from "semantic-ui-react";
 import { useState } from "react";
 import fire from "../../fire";
+
+import "./auth.css"
+
+const institutionOptions = [
+  {
+    key: 'uw',
+    value: 'uw',
+    text: 'University of Waterloo'
+  },
+  {
+    key: 'mac',
+    value: 'mac',
+    text: 'McMaster University'
+  },
+  {
+    key: 'uoft',
+    value: 'uoft',
+    text: 'University of Toronto'
+  },
+  {
+    key: 'qu',
+    value: 'qu',
+    text: 'Queens University'
+  }
+]
+
+const motivationOptions = [
+  {
+    key: 'a',
+    value: 'a',
+    text: 'Speak to people in my faculty'
+  },
+  {
+    key: 'b',
+    value: 'b',
+    text: 'Become cooler'
+  },
+  {
+    key: 'c',
+    value: 'c',
+    text: 'Get inspired'
+  }
+]
+
+const referralOptions = [
+  {
+    key: 'linkedin',
+    value: 'linkedin',
+    text: 'Linkedin'
+  },
+  {
+    key: 'friends',
+    value: 'friends',
+    text: 'Friends and family'
+  },
+  {
+    key: 'what',
+    value: 'what',
+    text: 'Just stumbled across it!'
+  }
+]
+
 export default function SignUp() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
@@ -47,47 +111,74 @@ export default function SignUp() {
       });
   };
   return (
-    <div>
+    <div className="form">
       <h1>SignUp</h1>
       <form onSubmit={formSubmission}>
-        <div>
+        <div className="inline group left">
           <label>First Name</label>
-          <input type="text" onChange={firstNameInputChangeHandler}></input>
+          <Input fluid type="text" onChange={firstNameInputChangeHandler} />
         </div>
-        <div>
+        <div className="inline group right">
           <label>Last Name</label>
-          <input type="text" onChange={lastNameInputChangeHandler}></input>
+          <Input fluid type="text" onChange={lastNameInputChangeHandler} required />
         </div>
-        <div>
-          <div>
-            <label>Educational Institution</label>
-            <input type="text" onChange={schoolInputHandler}></input>
-          </div>
-          <div>
-            <label>Level of Education</label>
-            <input type="text" onChange={gradeInputHandler}></input>
-          </div>
-          <div>
-            <label>What do you hope to achieve through XYZ?</label>
-            <input type="text" onChange={bioInputHandler}></input>
-          </div>
+        <div className="group">
           <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            id="email"
+          <Input fluid
+            type="email"
             onChange={emailInputChangeHandler}
-          ></input>
+            required
+           />
         </div>
-        <div>
+        <div className="group">
           <label htmlFor="password">Password</label>
-          <input
-            type="text"
-            id="password"
+          <Input fluid
+            type="password"
             onChange={passwordInputChangeHandler}
-          ></input>
+            required
+           />
+        </div>
+        <div className="group">
+          <label htmlFor="password">Confirm Password</label>
+          <Input fluid
+            type="password"
+            onChange={passwordInputChangeHandler}
+            required
+           />
+        </div>
+        <div className="inline group left">
+          <label>Educational Institution</label>
+          <Dropdown fluid search selection
+            placeholder='Select an answer'
+            options={institutionOptions}
+            onChange={schoolInputHandler}
+            required
+          />
+        </div>
+        <div className="inline group right">
+          <label>Level of Education</label>
+          <Input fluid fluid type="text" onChange={gradeInputHandler} required />
+        </div>
+        <div className="group">
+          <label>What do you hope to achieve through Coffee Hours?</label>
+          <Dropdown fluid selection
+            placeholder='Select an answer'
+            options={motivationOptions}
+            onChange={bioInputHandler}
+            required
+          />
+        </div>
+        <div className="group">
+          <label>Where did you hear about Coffee Hours?</label>
+          <Dropdown fluid selection
+            placeholder='Select an answer'
+            options={referralOptions}
+            // onChange={}
+            required
+          />
         </div>
         <div>
-          <button>Submit</button>
+          <Button text="Submit" />
         </div>
       </form>
     </div>
