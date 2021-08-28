@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
+import "./Navbar.css"
+
+import logo from "./logo_transparent.png"
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
@@ -36,14 +39,9 @@ export default function Navbar() {
 
   return (
     <nav>
-      <p>{auth && firstName}</p>
-      <Link to="/">Home</Link>
-      {!auth && <Link to="/signin">Sign In</Link>}
-      {auth && (
-        <Link to="/" onClick={handleLogout}>
-          Sign Out
-        </Link>
-      )}
+      <Link to="/"><img src={logo} /> Coffee Hours</Link>
+      {/* {auth ? <Link to="/" onClick={handleLogout}>Sign Out</Link>
+            : <Link to="/signin">Sign In</Link>} */}
     </nav>
   );
 }
