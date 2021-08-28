@@ -37,7 +37,6 @@ export default function Navbar() {
 
   return (
     <nav>
-      <p>{auth && name}</p>
       <Link to="/">Home</Link>
       {!auth && <Link to="/signin">Sign In</Link>}
       {auth && (
