@@ -1,5 +1,6 @@
 import { useState } from "react";
 import fire from "../../fire";
+import ProfilePic from "../UI-components/ProfilePicture";
 export default function CommunityHubGallery() {
   const [comments, setComments] = useState("");
   fire
@@ -19,6 +20,7 @@ export default function CommunityHubGallery() {
             <div>
               <p> {val.data().name} </p>
               <p> {val.data().comment} </p>
+              <ProfilePic name={val.data().comment}/>
             </div>
           );
         })}
