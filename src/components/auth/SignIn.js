@@ -37,7 +37,7 @@ export default function SignIn() {
         <div className="group">
           <label>Password</label>
           <Input
-            type="text"
+            type="password"
             onChange={passwordInputChangeHandler}
             required
           />
