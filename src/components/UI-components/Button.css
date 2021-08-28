@@ -1,7 +1,7 @@
-button {
+.button {
   border-radius: 20px !important;
   padding: 6px 10px;
-  font-size: 0.8em !important;
+  font-size: 16px !important;
 
   background-color: var(--dark-green);
   color: white;
@@ -9,8 +9,12 @@ button {
   box-shadow: 0 4px 4px 0 var(--shadow-color);
 }
 
-button.secondary {
+.button.secondary {
   background-color: #00000000;
   border: 1px solid black;
   color: black;
+}
+
+.button.big {
+  font-size: 24px !important;
 }
