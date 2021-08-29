@@ -24,7 +24,7 @@
   padding: 5vw 9vw;
   flex: 1;
   box-shadow: 0 -5px 15px var(--shadow-color);
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .form h1 {
