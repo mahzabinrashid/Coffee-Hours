@@ -12,9 +12,10 @@ class Button extends React.Component {
     else
       this.class  += " primary"
       
-    if (this.props.big) {
+    if (this.props.big)
       this.class += " big"
-    }
+    else if (this.props.biig)
+      this.class += " biig"
   }
 
   render() {
