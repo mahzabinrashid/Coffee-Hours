@@ -1,11 +1,16 @@
 .mentor-card {
   display: inline-block;
   overflow-y: auto;
-  width: 300px;
+  width: 320px;
   box-shadow: 5px 5px 12px 0 var(--shadow-color);
   padding: 10px;
   margin: 15px;
-  height: 350px;
+  height: 380px;
+  position: relative;
+}
+
+.mentor-card:hover {
+  cursor: pointer;
 }
 
 .mentor-card .image-wrapper {
@@ -34,6 +39,17 @@
 
 .mentor-card p {
   text-overflow: ellipsis;
+  font-size: 1em;
+  max-height: 50px;
+}
+
+.mentor-card .button-wrapper {
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
 }
 
 .my_tag {

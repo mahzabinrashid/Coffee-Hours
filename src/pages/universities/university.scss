@@ -2,8 +2,8 @@
   font-weight: 700;
   font-size: 40px;
   font-family: "Raleway";
-  padding-top: 240px;
-  padding-left: 200px;
+  margin-top: 240px;
+  margin-left: 200px;
   position: absolute;
 }
 
@@ -35,4 +35,30 @@ img.uwaerial {
     font-family: "Roboto";
     padding-left: 200px;
     padding-right: 150px;
+}
+
+.modal {
+  height: 90vh !important;
+  margin: 5vh 25vw !important;
+  width: 50vw !important;
+
+  .img-wrapper {
+    height: 400px;
+    overflow: hidden;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .button-wrapper {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
