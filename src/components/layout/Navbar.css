@@ -30,3 +30,11 @@ nav > span > *:not(:first-child) {
 nav .right {
   float: right;
 }
+
+nav .right * {
+  margin: 0 3px;
+}
+
+nav .icon {
+  height: 25px;
+}
