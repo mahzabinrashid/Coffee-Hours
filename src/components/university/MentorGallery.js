@@ -47,7 +47,11 @@ export default function MentorGallery(props) {
         <a
           className="tag"
           onClick={() => {
-            setEnteredTag("Women in STEM");
+            if (enteredTag === "Women in STEM") {
+              setEnteredTag("");
+            } else {
+              setEnteredTag("Women in STEM");
+            }
           }}
         >
           🔬 <span>Women in STEM</span>
@@ -55,7 +59,11 @@ export default function MentorGallery(props) {
         <a
           className="tag"
           onClick={() => {
-            setEnteredTag("Student Exchange");
+            if (enteredTag === "Student Exchange") {
+              setEnteredTag("");
+            } else {
+              setEnteredTag("Student Exchange");
+            }
           }}
         >
           🌎 <span>Student Exchange</span>
@@ -63,7 +71,11 @@ export default function MentorGallery(props) {
         <a
           className="tag"
           onClick={() => {
-            setEnteredTag("LGBTQ+ Advocate");
+            if (enteredTag === "LGBTQ+ Advocate") {
+              setEnteredTag("");
+            } else {
+              setEnteredTag("LGBTQ+ Advocate");
+            }
           }}
         >
           🌈 <span>LGBTQ+ Advocate</span>
