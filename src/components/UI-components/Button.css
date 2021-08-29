@@ -17,4 +17,9 @@
 
 .button.big {
   font-size: 24px !important;
+  padding: 12px 30px;
+}
+
+.button.biig {
+  font-size: 36px !important;
 }
