@@ -31,8 +31,8 @@ export default function Navbar() {
   return (
     <nav>
       <span className="left">
-        <Link to="/">
-          <img src={logo} alt="logo"/> Coffee Hours
+        <Link to={auth ? "/home" : "/"}>
+          <img src={logo} alt="logo" className="logo"/><span className="site-title">Coffee Hours</span>
         </Link>
       </span>
       <span className="right">
@@ -41,7 +41,7 @@ export default function Navbar() {
             <Link to="/communityhub">
               <img src={chatIcon} className="icon" alt="chat icon"/>
             </Link>
-            <Link to="/">
+            <Link to={auth ? "/home" : "/"}>
               <img src={homeIcon} className="icon" alt="home icon"/>
             </Link>
             <Link to="/signin" onClick={handleLogout}>

@@ -17,6 +17,14 @@ nav a:hover {
   color: black;
 }
 
+nav img.logo {
+  width: 50px;
+}
+
+nav span.site-title {
+  font-weight: 600;
+}
+
 nav > span {
   display: inline-flex;
   height: 100%;

@@ -22,7 +22,7 @@ export default function SignIn() {
       .auth()
       .signInWithEmailAndPassword(enteredEmail, enteredPassword)
       .then(() => {
-        window.location.href = "/";
+        window.location.href = "/home";
       })
       .catch((err) => {
         switch (err.code) {

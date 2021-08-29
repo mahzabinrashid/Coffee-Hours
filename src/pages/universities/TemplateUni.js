@@ -2,6 +2,7 @@ import MentorGallery from "../../components/university/MentorGallery";
 import { Modal } from 'semantic-ui-react'
 import Button from "../../components/UI-components/Button";
 import React from "react"
+import fire from "../../fire";
 import "./university.scss";
 
 class TemplateUniversity extends React.Component {
@@ -9,35 +10,56 @@ class TemplateUniversity extends React.Component {
     super(props);
     this.state = {
       open: false,
-      person: {}
+      person: {},
+      auth: false
     }
+
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          open: this.state.open,
+          person: this.state.person,
+          auth: true
+        })
+      } else {
+        this.setState({
+          open: this.state.open,
+          person: this.state.person,
+          auth: false
+        })
+      }
+    });
   }
 
   selectPerson = (p) => {
     this.setState({
       open: true,
-      person: p
+      person: p,
+      auth: this.state.auth
     })
   }
 
   setImage = (i) => {
     this.setState({
       open: this.state.open,
-      person: this.state.person
+      person: this.state.person,
+      auth: this.state.auth
     })
   }
 
   setOpen = (b) => {
     this.setState({
       open: b,
-      person: this.state.person
+      person: this.state.person,
+      auth: this.state.auth
     })
   }
 
   setPerson = (p) => {
     this.setState({
       open: this.state.open,
-      person: p
+      person: p,
+      auth: this.state.auth
     })
   }
 
@@ -70,11 +92,15 @@ class TemplateUniversity extends React.Component {
             </div>
             <h1>{this.state.person.name}</h1>
             <p>{this.state.person.story}</p>
-            <div className="button-wrapper">
-              <a href="https://calendly.com/coffee-hours-mentor/30min" target="_blank">
-                <Button text="☕ book a virtual coffee with me!" primary />
-              </a>
-            </div>
+            {
+              this.state.auth ? 
+              <div className="button-wrapper">
+                <a href="https://calendly.com/coffee-hours-mentor/30min" target="_blank">
+                  <Button text="☕ book a virtual coffee with me!" primary />
+                </a>
+              </div>
+              : null
+            }
           </Modal.Content>
         </Modal>
       </div>
