@@ -1,14 +1,48 @@
+.intro-section {
+  padding: 10vh 8vw;
+  max-width: 40%;
+  text-align: center;
+}
+
+.intro-section h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+.intro-section h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.intro-section img {
+  width: 28vw;
+}
+
 .form {
   background-color: var(--light-green);
-  padding: 40px 50px;
+  padding: 5vw 9vw;
+  flex: 1;
+  box-shadow: 0 -5px 15px var(--shadow-color);
+}
+
+.form h1 {
+  font-weight: 700;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+
+.form p {
+  font-size: 1.35em;
 }
 
 .form label {
   display: block;
+  font-size: 1.15em;
 }
 
 .form .group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form .inline.group {
@@ -18,4 +52,30 @@
 
 .form .inline.group.right {
   float: right;
+}
+
+.form .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fake-button {
+  border-radius: 20px !important;
+  padding: 6px 10px;
+  font-size: 16px !important;
+
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 4px 0 var(--shadow-color);
+}
+
+.fake-button.secondary {
+  background-color: #00000000;
+  border: 1px solid black;
+  color: black;
+}
+
+.fake-button:hover {
+  cursor: pointer;
 }

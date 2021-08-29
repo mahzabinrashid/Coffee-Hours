@@ -2,6 +2,9 @@ nav {
   box-shadow: 0 4px 10px 0 var(--shadow-color);
   padding: 8px 15px;
   height: 65px;
+  position: relative;
+  z-index: 5000;
+  background-color: white;
 }
 
 nav a {
