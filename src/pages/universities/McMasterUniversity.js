@@ -1,23 +1,28 @@
-import { MentorGallery, Mentor } from "../components/university/MentorGallery";
-import universityLogo from "../assets/mcmaster-logo.png"
-import uwaerial from "../assets/uw_aerial.jpg"
-import imageA from "../assets/person-a.jpeg"
-import imageB from "../assets/person-b.jpeg"
-import imageC from "../assets/person-c.jpeg"
-
-import "./university.css"
+import {
+  MentorGallery,
+  Mentor,
+} from "../../components/university/MentorGallery";
+import universityLogo from "../../assets/mcmaster-logo.png";
+import uwaerial from "../../assets/uw_aerial.jpg";
+import imageA from "../../assets/person-a.jpeg";
+import imageB from "../../assets/person-b.jpeg";
+import imageC from "../../assets/person-c.jpeg";
+import "./university.scss";
 
 export default function McMasterUniversity() {
   return (
     <div className="uni-page">
       <h1 className="title">McMaster University</h1>
-      <img src = {universityLogo} className="university-logo" />
+      <img src={universityLogo} className="university-logo" alt="uni logo"/>
       <div
         className="aerial-wrapper"
-        style={{backgroundImage: "url(" + uwaerial + ")" }}
-      >
-      </div>
-      <p>Find a mentor you're interested in learning more from and book a virtual coffee chat with them! You can use the filters to help narrow down your search.</p>
+        style={{ backgroundImage: "url(" + uwaerial + ")" }}
+      ></div>
+      <p>
+        Find a mentor you're interested in learning more from and book a virtual
+        coffee chat with them! You can use the filters to help narrow down your
+        search.
+      </p>
 
       <MentorGallery>
         <Mentor

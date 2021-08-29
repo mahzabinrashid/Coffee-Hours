@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Landing from "./pages/Landing";
-import UniversityOfWaterloo from "./pages/UniversityOfWaterloo";
+import UniversityOfWaterloo from "./pages/universities/UniversityOfWaterloo";
 import CommunityHub from "./pages/CommunityHub";
-import UniversityOfToronto from "./pages/UniversityOfToronto";
-import QueensUniversity from "./pages/QueensUniversity";
-import McMasterUniversity from "./pages/McMasterUniversity";
+import UniversityOfToronto from "./pages/universities/UniversityOfToronto";
+import QueensUniversity from "./pages/universities/QueensUniversity";
+import McMasterUniversity from "./pages/universities/McMasterUniversity";
+import BritishColumbia from "./pages/universities/BritishColumbia";
+import Western from "./pages/universities/Western";
 
 function App() {
   return (
@@ -34,14 +36,20 @@ function App() {
         <Route path="/universities/universityofwaterloo">
           <UniversityOfWaterloo />
         </Route>
-        <Route path="/universities/uoft">
+        <Route path="/universities/universityoftoronto">
           <UniversityOfToronto />
         </Route>
-        <Route path="/universities/mac">
+        <Route path="/universities/mcmasteruniversity">
           <McMasterUniversity />
         </Route>
-        <Route path="/universities/queens">
+        <Route path="/universities/queensuniversity">
           <QueensUniversity />
+        </Route>
+        <Route path="/universities/universityofbritishcolumbia">
+          <BritishColumbia />
+        </Route>
+        <Route path="/universities/westernuniversity">
+          <Western />
         </Route>
       </Switch>
     </div>

@@ -1,17 +1,17 @@
-import { MentorGallery, Mentor } from "../components/university/MentorGallery";
-import universityLogo from "../assets/uoft-logo.png"
-import uwaerial from "../assets/uw_aerial.jpg"
-import imageA from "../assets/person-a.jpeg"
-import imageB from "../assets/person-b.jpeg"
-import imageC from "../assets/person-c.jpeg"
+import { MentorGallery, Mentor } from "../../components/university/MentorGallery";
+import universityLogo from "../../assets/queens-logo.png"
+import uwaerial from "../../assets/uw_aerial.jpg"
+import imageA from "../../assets/person-a.jpeg"
+import imageB from "../../assets/person-b.jpeg"
+import imageC from "../../assets/person-c.jpeg"
 
-import "./university.css"
+import "./university.scss"
 
-export default function UniversityOfToronto() {
+export default function QueensUniversity() {
   return (
     <div className="uni-page">
-      <h1 className="title">University of Toronto</h1>
-      <img src = {universityLogo} className="university-logo" />
+      <h1 className="title">Queens University</h1>
+      <img src = {universityLogo} className="university-logo" alt="uni logo"/>
       <div
         className="aerial-wrapper"
         style={{backgroundImage: "url(" + uwaerial + ")" }}

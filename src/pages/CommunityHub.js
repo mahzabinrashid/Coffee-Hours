@@ -1,4 +1,4 @@
-import CommunityHubComponent from "../components/university/CommunityHub";
+import CommunityHubComponent from "../components/community/CommunityHub";
 export default function CommunityHub() {
   return (
     <div>
