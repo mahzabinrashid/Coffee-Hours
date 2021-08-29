@@ -57,7 +57,7 @@ export default function CommunityHubPost() {
           </div>
         </form>
       )}
-      {!auth && <p className="loggedout"><a href="/login">Log in</a> to post your own comment!</p>}
+      {!auth && <p className="loggedout"><a href="/signin">Log in</a> to post your own comment!</p>}
     </div>
   );
 }
