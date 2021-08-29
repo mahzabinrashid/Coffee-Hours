@@ -10,9 +10,6 @@ import "./MentorGallery.scss";
 import "./Tag.scss";
 export default function MentorGallery(props) {
   const [enteredTag, setEnteredTag] = useState("");
-  const clickHandler = (e) => {
-    setEnteredTag(e.target.outerText);
-  };
   const people = [
     {
       name: "Priscilla",
@@ -47,14 +44,29 @@ export default function MentorGallery(props) {
   return (
     <div class="mentor_gallery">
       <div className="tag_box">
-        <a className="tag">
-          🔬 <span onClick={clickHandler}>Women in STEM</span>
+        <a
+          className="tag"
+          onClick={() => {
+            setEnteredTag("Women in STEM");
+          }}
+        >
+          🔬 <span>Women in STEM</span>
         </a>
-        <a className="tag">
-          🌎 <span onClick={clickHandler}>Student Exchange</span>
+        <a
+          className="tag"
+          onClick={() => {
+            setEnteredTag("Student Exchange");
+          }}
+        >
+          🌎 <span>Student Exchange</span>
         </a>
-        <a className="tag">
-          🌈 <span onClick={clickHandler}>LGBTQ+ Advocate</span>
+        <a
+          className="tag"
+          onClick={() => {
+            setEnteredTag("LGBTQ+ Advocate");
+          }}
+        >
+          🌈 <span>LGBTQ+ Advocate</span>
         </a>
       </div>
 
@@ -62,12 +74,9 @@ export default function MentorGallery(props) {
         <Grid container spacing={2}>
           {people
             .filter((person) => {
-              // if (enteredTag === "") {
-              //   return person;
-              // } else if (person.tag === enteredTag) {
-              //   return person;
-              // }
-              return person
+              if (enteredTag === "" || person.tag === enteredTag) {
+                return person;
+              }
             })
             .map((filteredPerson) => (
               <Grid item xs={12} md={6} lg={4}>
