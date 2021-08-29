@@ -1,7 +1,7 @@
 import universityLogo from "../../assets/ubc.png";
 import uwaerial from "../../assets/uw_aerial.jpg";
 import MentorGallery from "../../components/university/MentorGallery";
-
+import "./university.scss";
 export default function McMasterUniversity() {
   return (
     <div className="uni-page">

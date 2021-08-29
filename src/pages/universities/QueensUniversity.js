@@ -1,7 +1,7 @@
 
 import universityLogo from "../../assets/queens-logo.png"
 import uwaerial from "../../assets/uw_aerial.jpg"
-
+import "./university.scss";
 import MentorGallery from "../../components/university/MentorGallery";
 export default function QueensUniversity() {
   return (

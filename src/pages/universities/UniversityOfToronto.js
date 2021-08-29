@@ -2,7 +2,6 @@
 import universityLogo from "../../assets/uoft-logo.png"
 import uwaerial from "../../assets/uw_aerial.jpg"
 import MentorGallery from "../../components/university/MentorGallery";
-
 import "./university.scss"
 
 export default function UniversityOfToronto() {
