@@ -20,7 +20,7 @@ class UniversityCard extends React.Component {
     return(
       <div className="uni-card">
         <img src={this.props.logo} alt="uni logo" />
-        <p>{this.props.name}</p>
+        <p className="label">{this.props.name}</p>
       </div>
     )
   }

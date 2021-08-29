@@ -1,4 +1,5 @@
 import Button from "../UI-components/Button.js"
+import { Link } from "react-router-dom";
 import { Input } from "semantic-ui-react";
 import { useState } from "react";
 import fire from "../../fire";
@@ -21,11 +22,12 @@ export default function SignIn() {
   };
   return (
     <div className="form">
-      <h1>Sign In</h1>
+      <h1>Log In</h1>
+      <p>Don't have an account? <Link to="/signup">Sign up now!</Link></p>
       <form onSubmit={formSubmission}>
         <div className="group">
-          <label>Email</label>
-          <Input
+          <label>Email Address</label>
+          <Input fluid
             type="text"
             onChange={emailInputChangeHandler}
             required
@@ -33,14 +35,14 @@ export default function SignIn() {
         </div>
         <div className="group">
           <label>Password</label>
-          <Input
+          <Input fluid
             type="password"
             onChange={passwordInputChangeHandler}
             required
           />
         </div>
         <div>
-          <Button text="Submit" />
+          <Button text="Login" />
         </div>
       </form>
     </div>

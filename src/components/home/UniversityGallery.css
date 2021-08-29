@@ -6,6 +6,11 @@
   max-height: 70vh;
 }
 
+.uni-gallery *, .uni-gallery *:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .uni-gallery h4 {
   font-size: 1.5em;
 }
@@ -24,10 +29,10 @@
   padding: 20px;
   text-align: center;
   margin: 15px;
-  width: 170px;
   box-shadow: 0 5px 12px 0 var(--shadow-color);
   transition: 0.3s;
-  height: 220px;
+  height: 240px;
+  width: 200px;
 }
 
 .uni-card:hover {
@@ -36,6 +41,11 @@
 }
 
 .uni-card img {
-  height: 110px;
-  margin-bottom: 10px;
+  height: 125px;
+  margin-bottom: 25px;
+}
+
+.uni-card .label {
+  font-size: 1.3em;
+  font-weight: 600;
 }
