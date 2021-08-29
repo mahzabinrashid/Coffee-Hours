@@ -1,25 +1,6 @@
-.mentor-gallery {
-  border: 1px solid black;
-  border-radius: 20px;
-  margin: 40px 120px;
-  padding: 10px 20px;
-  max-height: 80vh;
-
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-}
-
-.mentor-gallery .mentor-card:nth-child(2) img {
-  margin-top: -30px;
-}
-
-.mentor-gallery .mentor-card:nth-child(3) img {
-  margin-top: -110px;
-}
-
 .mentor-card {
   display: inline-block;
+  overflow-y: auto;
   width: 300px;
   box-shadow: 5px 5px 12px 0 var(--shadow-color);
   padding: 10px;
