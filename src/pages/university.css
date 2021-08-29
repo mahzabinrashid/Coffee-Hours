@@ -1,0 +1,38 @@
+.uni-page h1.title {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Raleway";
+  padding-top: 240px;
+  padding-left: 200px;
+  position: absolute;
+}
+
+img.university-logo {
+  width: 200px;
+  padding-left: 30px;
+  padding-top: 130px;
+  z-index: -1;
+}
+
+.aerial-wrapper {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+img.uwaerial {
+  width: 100%;
+}
+
+.uni-page > p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Roboto";
+    padding-left: 200px;
+    padding-right: 150px;
+}

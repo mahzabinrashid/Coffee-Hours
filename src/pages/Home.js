@@ -13,9 +13,9 @@ export default function Home() {
       <h1>Welcome!</h1>
       <UniversityGallery>
         <Link to="/universities/universityofwaterloo"><UniversityCard name="University of Waterloo" logo={waterlooLogo} /></Link>
-        <UniversityCard name="University of Toronto" logo={uoftLogo} />
-        <UniversityCard name="McMaster University" logo={mcmasterLogo} />
-        <UniversityCard name="Queens University" logo={queensLogo} />
+        <Link to="/universities/uoft"><UniversityCard name="University of Toronto" logo={uoftLogo} /></Link>
+        <Link to="/universities/mac"><UniversityCard name="McMaster University" logo={mcmasterLogo} /></Link>
+        <Link to="/universities/queens"><UniversityCard name="Queens University" logo={queensLogo} /></Link>
       </UniversityGallery>
     </div>
   );

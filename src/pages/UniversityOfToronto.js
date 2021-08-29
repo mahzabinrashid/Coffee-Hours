@@ -1,5 +1,5 @@
 import { MentorGallery, Mentor } from "../components/university/MentorGallery";
-import universityLogo from "../assets/waterloo-logo-round.png"
+import universityLogo from "../assets/uoft-logo.png"
 import uwaerial from "../assets/uw_aerial.jpg"
 import imageA from "../assets/person-a.jpeg"
 import imageB from "../assets/person-b.jpeg"
@@ -7,10 +7,10 @@ import imageC from "../assets/person-c.jpeg"
 
 import "./university.css"
 
-export default function UniversityOfWaterloo() {
+export default function UniversityOfToronto() {
   return (
     <div className="uni-page">
-      <h1 className="title">University of Waterloo</h1>
+      <h1 className="title">University of Toronto</h1>
       <img src = {universityLogo} className="university-logo" />
       <div
         className="aerial-wrapper"

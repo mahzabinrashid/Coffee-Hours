@@ -7,6 +7,9 @@ import SignIn from "./pages/SignIn";
 import Landing from "./pages/Landing";
 import UniversityOfWaterloo from "./pages/UniversityOfWaterloo";
 import CommunityHub from "./pages/CommunityHub";
+import UniversityOfToronto from "./pages/UniversityOfToronto";
+import QueensUniversity from "./pages/QueensUniversity";
+import McMasterUniversity from "./pages/McMasterUniversity";
 
 function App() {
   return (
@@ -30,6 +33,15 @@ function App() {
         </Route>
         <Route path="/universities/universityofwaterloo">
           <UniversityOfWaterloo />
+        </Route>
+        <Route path="/universities/uoft">
+          <UniversityOfToronto />
+        </Route>
+        <Route path="/universities/mac">
+          <McMasterUniversity />
+        </Route>
+        <Route path="/universities/queens">
+          <QueensUniversity />
         </Route>
       </Switch>
     </div>

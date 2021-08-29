@@ -1,0 +1,56 @@
+.mentor-gallery {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 40px 120px;
+  padding: 10px 20px;
+  max-height: 80vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.mentor-gallery .mentor-card:nth-child(2) img {
+  margin-top: -30px;
+}
+
+.mentor-gallery .mentor-card:nth-child(3) img {
+  margin-top: -110px;
+}
+
+.mentor-card {
+  display: inline-block;
+  width: 300px;
+  box-shadow: 5px 5px 12px 0 var(--shadow-color);
+  padding: 10px;
+  margin: 15px;
+  height: 350px;
+}
+
+.mentor-card .image-wrapper {
+  height: 170px;
+  overflow: hidden;
+}
+
+.mentor-card img {
+  width: 100%;
+}
+
+.mentor-card h2 {
+  font-size: 1.6em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.mentor-card .text {
+  padding: 5px;
+}
+
+.mentor-card h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.mentor-card p {
+  text-overflow: ellipsis;
+}
