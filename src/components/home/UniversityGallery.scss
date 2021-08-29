@@ -1,24 +1,26 @@
-.uni_galery {
-  a {
-    text-decoration: none;
-    color: black;
+.uni-gallery-wrapper {
+  .uni_galery {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  
+    p {
+      font-size: 1.5em;
+    }
   }
-
-  p {
-    font-size: 1.5em;
+  h1 {
+    font-weight: 700;
+    margin-left: 150px;
   }
-}
-h1 {
-  font-weight: 700;
-  margin-left: 150px;
-}
-h3 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.light_green {
-  background-color: #e4eeea;
-  padding: 50px;
-  width: 80%;
-  margin: auto;
+  h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .light_green {
+    background-color: #e4eeea;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+  }
 }

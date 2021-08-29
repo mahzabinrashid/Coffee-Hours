@@ -2,13 +2,13 @@
   font-weight: 700;
   font-size: 40px;
   font-family: "Raleway";
-  margin-top: 240px;
+  margin-top: 260px;
   margin-left: 200px;
   position: absolute;
 }
 
 img.university-logo {
-  width: 200px;
+  height: 300px;
   padding-left: 30px;
   padding-top: 130px;
   z-index: -1;
@@ -29,12 +29,13 @@ img.uwaerial {
   width: 100%;
 }
 
-.uni-page > p {
+.uni-page p.instructions {
     font-size: 20px;
     font-weight: 400;
     font-family: "Roboto";
-    padding-left: 200px;
-    padding-right: 150px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 150px;
 }
 
 .modal {

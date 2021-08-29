@@ -11,7 +11,7 @@ import western from "../../assets/western.png"
 
 export default function CommunityHubGallery() {
   return (
-    <div>
+    <div className="uni-gallery-wrapper">
       <h1>Welcome!</h1>
       <div className="light_green">
       <h3>Choose a university to get started!</h3>
