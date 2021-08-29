@@ -11,7 +11,7 @@ export default function McMasterUniversity() {
       <img src={universityLogo} className="university-logo" alt="uni logo"/>
       <div
         className="aerial-wrapper"
-        style={{ backgroundImage: "url(" + uwaerial + ")" }}
+        style={{ backgroundImage: "url(" + "https://images.pexels.com/photos/137618/pexels-photo-137618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" + ")" }}
       ></div>
       <p>
         Find a mentor you're interested in learning more from and book a virtual
