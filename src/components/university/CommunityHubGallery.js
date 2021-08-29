@@ -1,7 +1,8 @@
 import { useState } from "react";
 import fire from "../../fire";
-import ProfilePic from "../UI-components/ProfilePicture";
 import CommunityHubCard from "./CommunityHubCard";
+import Grid from "@material-ui/core/Grid";
+import "./CommunityHubGallery.scss";
 export default function CommunityHubGallery() {
   const [comments, setComments] = useState("");
   fire
@@ -13,19 +14,19 @@ export default function CommunityHubGallery() {
     });
 
   return (
-    <div>
-      <h1>CommunityHubGallery</h1>
-      {comments &&
-        comments.map((val) => {
-          return (
-            <div>
-              <CommunityHubCard/>
-              <p> {val.data().name} </p>
-              <p> {val.data().comment} </p>
-              <ProfilePic name={val.data().name}/>
-            </div>
-          );
-        })}
+    <div class="gallery">
+      <Grid container>
+        {comments && comments.map((val) => (
+          <Grid item xs={12} md={6} lg={3}>
+            <CommunityHubCard
+              name={val.data().name}
+              pic={val.data().name}
+              comment={val.data().comment}
+            />
+          </Grid>
+        ))}
+      </Grid>
+      
     </div>
   );
 }

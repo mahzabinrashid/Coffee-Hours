@@ -1,5 +1,16 @@
 .hub_card {
-  width: 292px;
-  height: 405px;
-  background-color: #386150;
+  margin: 25px;
+  padding: 20px 15px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  .header {
+      display: flex;
+  }
+  p {
+      font-weight: normal;
+  }
+  .bold {
+    font-weight: 700;
+  }
 }

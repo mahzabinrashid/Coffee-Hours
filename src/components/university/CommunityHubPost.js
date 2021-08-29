@@ -1,6 +1,5 @@
 import { useState } from "react";
 import fire from "../../fire";
-import { Input } from "semantic-ui-react";
 import "./CommunityHubPost.scss";
 import ProfilePic from "../UI-components/ProfilePicture";
 import Button from "../UI-components/Button.js";
@@ -15,6 +14,7 @@ export default function CommunityHubPost() {
       name: name,
       comment: enteredComment,
     });
+    setEnteredComment("");
   };
   const commentInputChangeHandler = (event) => {
     setEnteredComment(event.target.value);
@@ -37,14 +37,10 @@ export default function CommunityHubPost() {
   });
   return (
     <div className="hub_post">
-      <h1>Community Hub Post</h1>
-
       {auth && (
         <form onSubmit={formSubmission}>
           <div className="comment">
-            <label className="pic">
-              <ProfilePic name={name} />
-            </label>
+            <ProfilePic name={name} />
 
             <textarea
               type="text"
@@ -53,14 +49,15 @@ export default function CommunityHubPost() {
               onChange={commentInputChangeHandler}
               cols="95"
               rows="5"
+              value={enteredComment}
             ></textarea>
           </div>
-          <div class="btn">
+          <div className="hub_button_container">
             <Button text="Submit" />
           </div>
         </form>
       )}
-      {!auth && <p>log in to comment</p>}
+      {!auth && <p className="loggedout"><a href="/login">Log in</a> to post your own comment!</p>}
     </div>
   );
 }

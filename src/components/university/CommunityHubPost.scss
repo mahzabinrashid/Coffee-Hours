@@ -1,22 +1,19 @@
 .hub_post {
-  margin: 0 50px 60px 50px;
-}
-.comment {
-  input {
-    height: 89px;
-    width: 698px;
-    border-color: rgba(0, 0, 0, 0.7) !important;
+    margin: 20px 50px;
+  .comment {
+    display: flex;
+    flex-direction: row;
+    .avatar-circle {
+      margin-right: 20px;
+    }
+    textarea {
+      padding: 20px;
+    }
   }
-}
-textarea {
-    padding: 10px;
-}
-.pic {
-  margin-right: 10px;
-  margin-bottom: 77px;
-}
-
-.btn {
-  float: right;
-  margin-top: 10px;
+  .hub_button_container {
+    margin: 25px 0px 0px 71px;
+  }
+  .loggedout {
+      font-weight: normal;
+  }
 }

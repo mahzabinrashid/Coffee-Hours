@@ -1,10 +1,16 @@
-import "./CommunityHubCard.scss"
-export default function CommunityHub() {
+import "./CommunityHubCard.scss";
+import ProfilePicture from "../UI-components/ProfilePicture";
+export default function CommunityHub(props) {
   return (
     <div className="hub_card">
-      <h1>Community Hub</h1>
-      <p>Share the key takeways from your coffee chats!</p>
-     
+      <div class="header">
+        <ProfilePicture name={props.pic} />
+
+        <h3>{props.name}</h3>
+      </div>
+      <p class="bold">Key Takeaways</p>
+
+      <p>{props.comment}</p>
     </div>
   );
 }
