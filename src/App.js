@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import Landing from "./pages/Landing";
 import UniversityOfWaterloo from "./pages/UniversityOfWaterloo";
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Home />
+        </Route>
+        <Route path="/landing" exact>
+          <Landing />
         </Route>
         <Route path="/signup">
           <SignUp />

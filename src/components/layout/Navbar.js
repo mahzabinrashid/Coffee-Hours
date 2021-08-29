@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
 import Button from "../UI-components/Button.js";
-import "./Navbar.css"
-import logo from "./logo_transparent.png"
+import "./Navbar.css";
+import logo from "./logo_transparent.png";
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
@@ -40,19 +40,26 @@ export default function Navbar() {
   return (
     <nav>
       <span className="left">
-        <Link to="/"><img src={logo} /> Coffee Hours</Link>
+        <Link to="/">
+          <img src={logo} /> Coffee Hours
+        </Link>
       </span>
       <span className="right">
-        {auth ? <>
-                  <Button text="test" />
-                </>
-              : <>
-              <Link to="/signup"><Button text="Sign Up" /></Link>
-                <Link to="/signin"><Button text="Log In" secondary /></Link>
-              </>}
+        {auth ? (
+          <>
+            <Button to="/" onClick={handleLogout} text="Sign Out" />
+          </>
+        ) : (
+          <>
+            <Link to="/signup">
+              <Button text="Sign Up" />
+            </Link>
+            <Link to="/signin">
+              <Button text="Log In" secondary />
+            </Link>
+          </>
+        )}
       </span>
-      
-      {/* <Link to="/" onClick={handleLogout}>Sign Out</Link> */}
     </nav>
   );
 }
