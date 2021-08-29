@@ -4,6 +4,8 @@ import fire from "../../fire";
 import Button from "../UI-components/Button.js";
 import "./Navbar.css";
 import logo from "./logo_transparent.png";
+import chatIcon from "./chat-icon.png"
+import homeIcon from "./home-icon.png"
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
@@ -36,6 +38,12 @@ export default function Navbar() {
       <span className="right">
         {auth ? (
           <>
+            <Link to="/communityhub">
+              <img src={chatIcon} className="icon" />
+            </Link>
+            <Link to="/">
+              <img src={homeIcon} className="icon" />
+            </Link>
             <Link to="/signin" onClick={handleLogout}>
               <Button text="Sign Out" secondary />
             </Link>
