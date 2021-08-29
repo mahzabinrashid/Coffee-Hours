@@ -5,8 +5,9 @@ class Mentor extends React.Component {
   render() {
     return (
       <div className="mentor-card" onClick={() => {
-        this.props.selectFunc(this.props.person)
+        console.log("click card; image: ", this.props.image)
         this.props.setImageFunc(this.props.image)
+        this.props.selectFunc(this.props.person)
       }}>
         <div className="image-wrapper">
           <img src={this.props.image} alt="img of mentor" />
