@@ -7,7 +7,6 @@ import logo from "./logo_transparent.png";
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
-  const [name, setName] = useState("");
 
   const handleLogout = () => {
     fire.auth().signOut();
@@ -17,16 +16,6 @@ export default function Navbar() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         setAuth(true);
-        // getting user info from firebase
-        fire
-          .firestore()
-          .collection("users")
-          .doc(user.uid)
-          .get()
-          .then((doc) => {
-            // we can get other user info in a similar way (ser SignUp.js component for other key-value pairs)
-            setName(`${doc.data().firstName} ${doc.data().lastName}`);
-          });
       } else {
         setAuth(false);
       }
@@ -45,13 +34,22 @@ export default function Navbar() {
         </Link>
       </span>
       <span className="right">
-        {auth ? <>
-                  <Link to="/" onClick={handleLogout}><Button text="Sign Out" secondary /></Link>
-                </>
-              : <>
-                  <Link to="/signup"><Button text="Sign Up" primary /></Link>
-                  <Link to="/signin"><Button text="Log In" secondary /></Link>
-                </>}
+        {auth ? (
+          <>
+            <Link to="/signin" onClick={handleLogout}>
+              <Button text="Sign Out" secondary />
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link to="/signup">
+              <Button text="Sign Up" primary />
+            </Link>
+            <Link to="/signin">
+              <Button text="Log In" secondary />
+            </Link>
+          </>
+        )}
       </span>
     </nav>
   );

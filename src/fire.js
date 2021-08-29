@@ -1,11 +1,11 @@
 import firebase from "firebase";
 var firebaseConfig = {
-  apiKey: "AIzaSyAGqUAyAAKqcG5Y5nqH3eTszGez0clyUec",
-  authDomain: "technova-87841.firebaseapp.com",
-  projectId: "technova-87841",
-  storageBucket: "technova-87841.appspot.com",
-  messagingSenderId: "541572853685",
-  appId: "1:541572853685:web:0654a95edac256c402b3fc",
+  apiKey: "AIzaSyCKJs56nWNo23rpeBZ7QxBFOhOGdAVSopo",
+  authDomain: "coffee-hours.firebaseapp.com",
+  projectId: "coffee-hours",
+  storageBucket: "coffee-hours.appspot.com",
+  messagingSenderId: "472548446869",
+  appId: "1:472548446869:web:1315e30e04f5d7f187819c"
 };
 
 const fire = firebase.initializeApp(firebaseConfig);

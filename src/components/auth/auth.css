@@ -24,6 +24,7 @@
   padding: 5vw 9vw;
   flex: 1;
   box-shadow: 0 -5px 15px var(--shadow-color);
+  overflow-y: hidden;
 }
 
 .form h1 {
@@ -34,11 +35,13 @@
 
 .form p {
   font-size: 1.35em;
+  
 }
 
 .form label {
   display: block;
   font-size: 1.15em;
+  font-weight: 700;
 }
 
 .form .group {
@@ -57,25 +60,15 @@
 .form .buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
-.fake-button {
-  border-radius: 20px !important;
-  padding: 6px 10px;
-  font-size: 16px !important;
-
-  background-color: var(--dark-green);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 4px 0 var(--shadow-color);
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.fake-button.secondary {
-  background-color: #00000000;
-  border: 1px solid black;
-  color: black;
-}
-
-.fake-button:hover {
-  cursor: pointer;
+.bottom_padding {
+  margin-bottom: 25px;
 }
