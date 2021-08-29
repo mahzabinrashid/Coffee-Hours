@@ -17,7 +17,7 @@ class Mentor extends React.Component {
     return (
       <div className="mentor-card">
         <div className="image-wrapper">
-          <img src={this.props.image} />
+          <img src={this.props.image} alt="img of mentor" />
         </div>
         <h2>{this.props.name}</h2>
         <div className="text">

@@ -32,17 +32,17 @@ export default function Navbar() {
     <nav>
       <span className="left">
         <Link to="/">
-          <img src={logo} /> Coffee Hours
+          <img src={logo} alt="logo"/> Coffee Hours
         </Link>
       </span>
       <span className="right">
         {auth ? (
           <>
             <Link to="/communityhub">
-              <img src={chatIcon} className="icon" />
+              <img src={chatIcon} className="icon" alt="chat icon"/>
             </Link>
             <Link to="/">
-              <img src={homeIcon} className="icon" />
+              <img src={homeIcon} className="icon" alt="home icon"/>
             </Link>
             <Link to="/signin" onClick={handleLogout}>
               <Button text="Sign Out" secondary />
