@@ -1,11 +1,11 @@
 import firebase from "firebase";
 var firebaseConfig = {
-  apiKey: "AIzaSyCKJs56nWNo23rpeBZ7QxBFOhOGdAVSopo",
-  authDomain: "coffee-hours.firebaseapp.com",
-  projectId: "coffee-hours",
-  storageBucket: "coffee-hours.appspot.com",
-  messagingSenderId: "472548446869",
-  appId: "1:472548446869:web:1315e30e04f5d7f187819c"
+  apiKey: "AIzaSyC4tfW019zJHqfm7o6TwY8Hkhnppd0_PRM",
+  authDomain: "coffee-hours-b75db.firebaseapp.com",
+  projectId: "coffee-hours-b75db",
+  storageBucket: "coffee-hours-b75db.appspot.com",
+  messagingSenderId: "58961334782",
+  appId: "1:58961334782:web:6c2f98ad737a1ea72170af"
 };
 
 const fire = firebase.initializeApp(firebaseConfig);

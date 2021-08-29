@@ -127,7 +127,7 @@ export default function SignUp() {
           grade: enteredGrade,
           reasonForJoining: enteredBio,
         });
-        window.location.href = "/";
+        window.location.href = "/home";
       })
       .catch((err) => {
         switch (err.code) {
