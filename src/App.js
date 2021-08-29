@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Landing from "./pages/Landing";
 import UniversityOfWaterloo from "./pages/UniversityOfWaterloo";
+import CommunityHub from "./pages/CommunityHub";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/signin">
           <SignIn />
+        </Route>
+        <Route path="/communityhub">
+          <CommunityHub />
         </Route>
         <Route path="/universities/universityofwaterloo">
           <UniversityOfWaterloo />
