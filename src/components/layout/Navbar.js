@@ -30,13 +30,38 @@ export default function Navbar() {
 
   return (
     <nav>
-      <span className="left">
-        <Link to={auth ? "/home" : "/"}>
+      <span className="left group">
+        {/* <Link to={auth ? "/home" : "/"}> */}
+        <Link to="/">
           <img src={logo} alt="logo" className="logo"/><span className="site-title">Coffee Hours</span>
         </Link>
+        <span className="nav-spacer" />
+        {/* <Link to={auth ? "/home" : "/"}> */}
+        <Link to="/home">
+          <img src={homeIcon} className="icon" alt="home icon"/>
+        </Link>
+        <Link to="/communityhub">
+          <img src={chatIcon} className="icon" alt="chat icon"/>
+        </Link>
       </span>
-      <span className="right">
+      <span className="right group">
         {auth ? (
+          <Link to="/signin" onClick={handleLogout}>
+            <Button text="Sign Out" secondary />
+          </Link>
+        ) : (
+          <>
+            <Link to="/signup" >
+              <Button text="Sign Up" primary />
+            </Link>
+            <Link to="/signin">
+              <Button text="Log In" secondary />
+            </Link>
+          </>
+        )}
+
+        { // show and hide nav items based on auth. Disabled to give a clearer overview of the project without having to sign in.
+        /* {auth ? (
           <>
             <Link to="/communityhub">
               <img src={chatIcon} className="icon" alt="chat icon"/>
@@ -57,7 +82,7 @@ export default function Navbar() {
               <Button text="Log In" secondary />
             </Link>
           </>
-        )}
+        )} */}
       </span>
     </nav>
   );

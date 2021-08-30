@@ -5,16 +5,19 @@
   text-align: center;
   box-shadow: 0 5px 12px 0 var(--shadow-color);
   transition: 0.3s;
-  height: 300px;
-    width: 250px;
+  height: 320px;
+  width: 250px;
+
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
   }
+
   img {
     height: 200px;
     margin-bottom: 20px;
   }
+
   .label {
     font-size: 1.3em;
     font-weight: 600;
