@@ -40,7 +40,7 @@ export default function MentorGallery(props) {
   ];
 
   return (
-    <div class="mentor_gallery">
+    <div className="mentor_gallery">
       <div className="tag_box">
         <div
           className="tag"
@@ -80,7 +80,7 @@ export default function MentorGallery(props) {
         </div>
       </div>
 
-      <div class="box">
+      <div className="box">
         <Grid container spacing={2}>
           {people
             .filter((person) => {

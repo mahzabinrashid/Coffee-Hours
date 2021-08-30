@@ -4,7 +4,7 @@ import landing from "../assets/landing-long.png";
 import "./Landing.scss";
 export default function SignIn() {
   return (
-    <div class="cover">
+    <div className="cover">
       <div className="content">
         <h1>
           Deeper Connections
