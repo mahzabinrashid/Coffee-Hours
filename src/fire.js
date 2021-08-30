@@ -6,7 +6,7 @@ var firebaseConfig = {
   storageBucket: "coffee-hours-technova.appspot.com",
   messagingSenderId: "808103017841",
   appId: "1:808103017841:web:4b836a74a65ae9c84c4ad0",
-  measurementId: "G-GK2SDTEBBP"
+  measurementId: "G-GK2SDTEBBP",
 };
 
 const fire = firebase.initializeApp(firebaseConfig);
