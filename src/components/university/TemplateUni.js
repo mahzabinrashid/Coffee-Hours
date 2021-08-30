@@ -99,7 +99,7 @@ class TemplateUniversity extends React.Component {
         >
           <Modal.Content>
             <div className="img-wrapper">
-              <img src={this.state.person.image} />
+              <img src={this.state.person.image} alt="mentor"/>
             </div>
             <h1>{this.state.person.name}</h1>
             <p>{this.state.person.story}</p>
@@ -108,6 +108,7 @@ class TemplateUniversity extends React.Component {
                 <a
                   href="https://calendly.com/coffee-hours-mentor/30min"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Button text="☕ book a virtual coffee with me!" primary />
                 </a>

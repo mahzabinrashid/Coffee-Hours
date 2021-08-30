@@ -4,8 +4,6 @@ import Mentor from "./MentorGalleryCard";
 import Grid from "@material-ui/core/Grid";
 import imageA from "../../assets/person-a.jpeg";
 import imageB from "../../assets/person-b.jpeg";
-import imageC from "../../assets/person-c.jpeg";
-import Tag from "./Tag";
 import "./MentorGallery.scss";
 import "./Tag.scss";
 export default function MentorGallery(props) {
@@ -44,7 +42,7 @@ export default function MentorGallery(props) {
   return (
     <div class="mentor_gallery">
       <div className="tag_box">
-        <a
+        <div
           className="tag"
           onClick={() => {
             if (enteredTag === "Women in STEM") {
@@ -55,8 +53,8 @@ export default function MentorGallery(props) {
           }}
         >
           🔬 <span>Women in STEM</span>
-        </a>
-        <a
+        </div>
+        <div
           className="tag"
           onClick={() => {
             if (enteredTag === "Student Exchange") {
@@ -67,8 +65,8 @@ export default function MentorGallery(props) {
           }}
         >
           🌎 <span>Student Exchange</span>
-        </a>
-        <a
+        </div>
+        <div
           className="tag"
           onClick={() => {
             if (enteredTag === "LGBTQ+ Advocate") {
@@ -79,7 +77,7 @@ export default function MentorGallery(props) {
           }}
         >
           🌈 <span>LGBTQ+ Advocate</span>
-        </a>
+        </div>
       </div>
 
       <div class="box">
@@ -89,6 +87,7 @@ export default function MentorGallery(props) {
               if (enteredTag === "" || person.tag === enteredTag) {
                 return person;
               }
+              return null;
             })
             .map((filteredPerson) => (
               <Grid item xs={12} md={6} lg={4}>
