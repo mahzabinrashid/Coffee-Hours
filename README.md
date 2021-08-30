@@ -15,10 +15,11 @@ A TechNova 2021 hackathon submission. See our Devpost [here](https://devpost.com
 - Functional signup/login system
 
 ## Built Using
-- Figma
-- React, semantic-ui, Materail-ui
-- SCSS
+- React, Semantic-ui, Material-ui
 - Firebase
+- SCSS
+- Figma
+
 
 
 Please see our [Devpost Submission](https://devpost.com/software/coffee-hours) for more details!
