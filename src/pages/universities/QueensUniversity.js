@@ -1,5 +1,5 @@
 import universityLogo from "../../assets/queens-logo.png"
-import TemplateUniversity from "./TemplateUni.js";
+import TemplateUniversity from "../../components/university/TemplateUni.js";
 
 export default function QueensUniversity() {
   return (

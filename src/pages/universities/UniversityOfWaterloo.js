@@ -1,5 +1,5 @@
 import universityLogo from "../../assets/waterloo-logo-round.png";
-import TemplateUniversity from "./TemplateUni.js";
+import TemplateUniversity from "../../components/university/TemplateUni";
 
 export default function UniversityOfWaterloo() {
   return (

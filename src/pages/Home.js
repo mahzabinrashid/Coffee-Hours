@@ -1,5 +1,5 @@
 import UniversityGallery from "../components/home/UniversityGallery";
-import "./page.css";
+import "./Home.scss";
 
 export default function Home() {
   return (

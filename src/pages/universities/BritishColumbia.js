@@ -1,5 +1,5 @@
 import universityLogo from "../../assets/ubc.png";
-import TemplateUniversity from "./TemplateUni.js";
+import TemplateUniversity from "../../components/university/TemplateUni";
 
 export default function BritishColumbia() {
   return (

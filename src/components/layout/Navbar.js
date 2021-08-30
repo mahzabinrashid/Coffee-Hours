@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import fire from "../../fire";
 import Button from "../UI-components/Button.js";
-import "./Navbar.css";
-import logo from "./logo_transparent.png";
-import chatIcon from "./chat-icon.png"
-import homeIcon from "./home-icon.png"
+import "./Navbar.scss";
+import logo from "../../assets/logo_transparent.png";
+import chatIcon from "../../assets//chat-icon.png"
+import homeIcon from "../../assets/home-icon.png"
 
 export default function Navbar() {
   const [auth, setAuth] = useState(false);
@@ -50,7 +50,7 @@ export default function Navbar() {
           </>
         ) : (
           <>
-            <Link to="/signup">
+            <Link to="/signup" >
               <Button text="Sign Up" primary />
             </Link>
             <Link to="/signin">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Input } from "semantic-ui-react";
 import { useState } from "react";
 import fire from "../../fire";
-import "./auth.css";
+import "./Auth.scss";
 
 export default function SignIn() {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -24,16 +24,14 @@ export default function SignIn() {
       .then(() => {
         window.location.href = "/home";
       })
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/invalid-email":
-          case "auth/user-disabled":
-          case "auth/user-not-found":
-            setError(err.message);
-            break;
-          case "auth/wrong-password":
-            setError(err.message);
-            break;
+      .catch((error) => {
+        if (
+          error.code === "auth/invalid-email" ||
+          error.code === "auth/user-disabled" ||
+          error.code === "auth/user-not-found" ||
+          error.code === "auth/wrong-password"
+        ) {
+          setError(error.message);
         }
       });
   };
@@ -41,7 +39,6 @@ export default function SignIn() {
     <div className="form">
       <h1>Log In</h1>
       <p className="error">{error}</p>
-
       <form onSubmit={formSubmission}>
         <div className="group">
           <label>Email Address</label>

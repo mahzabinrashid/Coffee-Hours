@@ -1,8 +1,9 @@
 import Button from "../UI-components/Button.js";
 import { Input, Dropdown } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import fire from "../../fire";
-import "./auth.css";
+import "./Auth.scss";
 const institutionOptions = [
   {
     key: "uw",
@@ -10,7 +11,7 @@ const institutionOptions = [
     text: "University of Waterloo",
   },
   {
-    key: "mac",
+    key: "mcmaster",
     value: "McMaster University",
     text: "McMaster University",
   },
@@ -129,15 +130,13 @@ export default function SignUp() {
         });
         window.location.href = "/home";
       })
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setError(err.message);
-            break;
-          case "auth/weak-password":
-            setError(err.message);
-            break;
+      .catch((error) => {
+        if (
+          error.code === "auth/email-already-in-use" ||
+          error.code === "auth/invalid-email" ||
+          error.code === "auth/weak-password"
+        ) {
+          setError(error.message);
         }
       });
   };
@@ -224,9 +223,12 @@ export default function SignUp() {
             required
           />
         </div>
-        <div className="buttons">
+        <div className="buttons bottom_padding">
           <Button text="Sign Up" />
         </div>
+        <p>
+          Already have an account? <Link to="/signin">Sign in now!</Link>
+        </p>
       </form>
     </div>
   );
