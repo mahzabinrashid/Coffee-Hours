@@ -1,15 +1,19 @@
 nav {
   box-shadow: 0 4px 10px 0 var(--shadow-color);
   padding: 8px 15px;
-  height: 65px;
   position: relative;
   z-index: 5000;
   background-color: white;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   a {
     text-decoration: none;
     color: black;
     font-size: 1.2em;
+    white-space: nowrap;
   }
 
   a:hover {
@@ -22,12 +26,13 @@ nav {
 
   span.site-title {
     font-weight: 700;
+    white-space: nowrap;
   }
 
   .group {
     display: inline-flex;
-    height: 100%;
     align-items: center;
+    flex: 1;
   }
 
   .group > *:not(:first-child) {
@@ -35,7 +40,7 @@ nav {
   }
 
   .right {
-    float:right;
+    justify-content: flex-end;
   }
 
   .icon {

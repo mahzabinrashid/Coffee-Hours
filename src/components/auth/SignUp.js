@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import fire from "../../fire";
 import "./Auth.scss";
+import { Grid } from "@material-ui/core";
 const institutionOptions = [
   {
     key: "uw",
@@ -151,78 +152,80 @@ export default function SignUp() {
           and love to learn!
         </p>
         <p>Get started by registering with your email!</p>
-        <div className="inline group left">
-          <label>First Name</label>
-          <Input
-            fluid
-            type="text"
-            onChange={firstNameInputChangeHandler}
-            required
-          />
-        </div>
-        <div className="inline group right">
-          <label>Last Name</label>
-          <Input
-            fluid
-            type="text"
-            onChange={lastNameInputChangeHandler}
-            required
-          />
-        </div>
-        <div className="inline group left">
-          <label>Educational Institution (optional)</label>
-          <Dropdown
-            fluid
-            search
-            selection
-            placeholder="Select an answer"
-            value={enteredSchool}
-            options={institutionOptions}
-            onChange={schoolInputHandler}
-          />
-        </div>
-        <div className="inline group right">
-          <label>Level of Education (optional)</label>
-          <Dropdown
-            fluid
-            selection
-            placeholder="Select an answer"
-            options={educationOptions}
-            value={enteredGrade}
-            onChange={gradeInputHandler}
-          />
-        </div>
-        <div className="group">
-          <label>
-            What do you hope to achieve through Coffee Hours? (optional)
-          </label>
-          <Dropdown
-            fluid
-            selection
-            placeholder="Select an answer"
-            value={enteredBio}
-            options={motivationOptions}
-            onChange={bioInputHandler}
-          />
-        </div>
-        <div className="group">
-          <label htmlFor="email">Email</label>
-          <Input
-            fluid
-            type="email"
-            onChange={emailInputChangeHandler}
-            required
-          />
-        </div>
-        <div className="group">
-          <label htmlFor="password">Password</label>
-          <Input
-            fluid
-            type="password"
-            onChange={passwordInputChangeHandler}
-            required
-          />
-        </div>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <label>First Name</label>
+            <Input
+              fluid
+              type="text"
+              onChange={firstNameInputChangeHandler}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <label>Last Name</label>
+            <Input
+              fluid
+              type="text"
+              onChange={lastNameInputChangeHandler}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <label htmlFor="email">Email</label>
+            <Input
+              fluid
+              type="email"
+              onChange={emailInputChangeHandler}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <label htmlFor="password">Password</label>
+            <Input
+              fluid
+              type="password"
+              onChange={passwordInputChangeHandler}
+              required
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <label>Educational Institution (optional)</label>
+            <Dropdown
+              fluid
+              search
+              selection
+              placeholder="Select an answer"
+              value={enteredSchool}
+              options={institutionOptions}
+              onChange={schoolInputHandler}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <label>Level of Education (optional)</label>
+            <Dropdown
+              fluid
+              selection
+              placeholder="Select an answer"
+              options={educationOptions}
+              value={enteredGrade}
+              onChange={gradeInputHandler}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <label>
+              What do you hope to achieve through Coffee Hours? (optional)
+            </label>
+            <Dropdown
+              fluid
+              selection
+              placeholder="Select an answer"
+              value={enteredBio}
+              options={motivationOptions}
+              onChange={bioInputHandler}
+            />
+          </Grid>
+        </Grid>
         <div className="buttons bottom_padding">
           <Button text="Sign Up" />
         </div>
