@@ -14,7 +14,8 @@ class Mentor extends React.Component {
         <div className="image-wrapper">
           <img src={this.props.image} alt="img of mentor" />
         </div>
-        <div className="my_tag">{this.props.tag}</div>
+        {this.props.tag.map((tag) =>  <div className="my_tag">{tag}</div>)}
+       
         <h2>{this.props.name}</h2>
         <div className="text">
           <p>{this.props.story}</p>

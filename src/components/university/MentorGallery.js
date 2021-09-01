@@ -12,7 +12,7 @@ export default function MentorGallery(props) {
     {
       name: "Priscilla",
       image: imageB,
-      tag: "Women in STEM",
+      tag: ["Women in STEM", "Student Exchange"],
       story:
         "As the first girl in my family of immigrants to pursue a degree, there have been no shortage of obstacles along the way. From dealing with losing family members to facing financial hardship, applying to my dream program for university was challenging enough. I didn’t have any guidance from people that looked like me that I could look up to for help or simply reassurance. Though battling these mental barriers was incredibly difficult, as I tackled one challenge at a time, I was able to gain the confidence to be resilient. I worked hard and although didn’t always get the results I hoped for, I began forming a community around me that became my unconditional support network. I realized I attracted the energy I gave to others, so I maintained my values and work ethic to get where I am today. I’d love to chat about my story and experience in hopes to being someone others can now look up to!",
       clipped:
@@ -20,7 +20,7 @@ export default function MentorGallery(props) {
     },
     {
       name: "Tristan",
-      tag: "Student Exchange",
+      tag: ["Student Exchange"],
       image: imageA,
       story:
         "I was born without hands and feet. It’s a rare condition called congenital amputation. Living with that adversity has made me who I am today. My parents played a vital role in helping me persevere and appreciate myself more when I constantly compared my situation to everyone else's in the world. They're simple, but consistent words of affirmation helped me make peace with how I was going to have to live my life from now on. And my condition didn't stop me. I continued to have a blast in university and finish at the top of my honour role. I partook in every opportunity I wished in university - from a student exchange, to competing in debate competitions. I now work in my dream job no matter the limitations I had when I started. I'd love to talk about my experiences, book a chat if you'd like to learn more!",
@@ -29,7 +29,7 @@ export default function MentorGallery(props) {
     },
     {
       name: "Janet",
-      tag: "LGBTQ+ Advocate",
+      tag: ["LGBTQ+ Advocate"],
       image:
         "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       story:
@@ -84,7 +84,7 @@ export default function MentorGallery(props) {
         <Grid container spacing={2}>
           {people
             .filter((person) => {
-              if (enteredTag === "" || person.tag === enteredTag) {
+              if (enteredTag === "" || person.tag.includes(enteredTag)) {
                 return person;
               }
               return null;
