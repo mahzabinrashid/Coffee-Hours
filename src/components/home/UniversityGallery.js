@@ -15,7 +15,7 @@ export default function CommunityHubGallery() {
       <h1>Welcome!</h1>
       <div className="light_green">
       <h3>Choose a university to get started!</h3>
-      <Grid container className="uni_galery" spacing={2}>
+      <Grid container className="uni_gallery" spacing={4}>
         <Grid item xs={12} md={6} lg={4}>
           <Link to="/universities/universityofwaterloo">
             <UniversityCard name="University of Waterloo" logo={waterlooLogo} />
