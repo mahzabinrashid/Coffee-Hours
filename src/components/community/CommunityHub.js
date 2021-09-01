@@ -64,18 +64,18 @@ export default function CommunityHub() {
 
   return (
     <div className="community_hub">
-      <h1>Community Hub</h1>
-      <p className="community_hub_text">
-        Share the key takeways from your coffee chats!
-      </p>
-      <CommunityHubPost
-        auth={auth}
-        error={error}
-        enteredComment={enteredComment}
-        formSubmission={formSubmission}
-        name={name}
-        commentInputChangeHandler={commentInputChangeHandler}
-      />
+      <div className="text-section-wrapper">
+        <h1>Community Hub</h1>
+        <p>Share the key takeways from your coffee chats!</p>
+        <CommunityHubPost
+          auth={auth}
+          error={error}
+          enteredComment={enteredComment}
+          formSubmission={formSubmission}
+          name={name}
+          commentInputChangeHandler={commentInputChangeHandler}
+        />
+      </div>
       <CommunityHubGallery comments={comments} />
     </div>
   );

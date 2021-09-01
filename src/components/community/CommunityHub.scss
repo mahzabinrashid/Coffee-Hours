@@ -1,22 +1,39 @@
 .community_hub {
-    .community_hub_text{
-        margin: 15px 50px;
+  .text-section-wrapper {
+    padding: 40px 50px;
+
+    h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 30px;
     }
-  h1 {
-    font-size: 3.5em;
-    font-weight: 700;
-    margin: 25px 50px 0px 50px;
+
+    >p {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
   }
-  p {
-    font-size: 1.15em;
-    font-weight: 700;
-    margin: 15px;
-  }
+
   h3 {
     font-size: 20px;
     margin: auto 0px;
   }
+
   .avatar-circle {
     margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .community_hub {
+    .text-section-wrapper {
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+    .gallery {
+      padding: 30px;
+    }
   }
 }

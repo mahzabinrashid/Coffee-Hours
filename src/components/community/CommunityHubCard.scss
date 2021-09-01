@@ -5,13 +5,17 @@
   overflow-y: auto;
   background-color: white;
   border-radius: 10px;
+
   .header {
-      display: flex;
+    display: flex;
   }
+
   p {
-      font-weight: normal!important;
+    font-size: 1.15em;
+    margin: 15px;
   }
+
   .bold {
-    font-weight: 700!important;
+    font-weight: 700 !important;
   }
 }
