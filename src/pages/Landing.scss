@@ -25,3 +25,44 @@
   position: absolute;
   margin-top: 30px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .cover {
+    h1 {
+      font-size: 3.5em;
+    }
+
+    p {
+      font-size: 1.4em;
+      width: 50vw;
+    }
+
+    img {
+      height: 70vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .cover {
+    padding: 3vh 10vw;
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      width: 80vw;
+    }
+
+    img {
+      height: 45vh;
+    }
+
+    button.button.primary.big {
+      font-size: 18px !important;
+      padding: 8px 20px;
+    }
+  }
+}
