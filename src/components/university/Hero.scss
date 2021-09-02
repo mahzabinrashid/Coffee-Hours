@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+
+  .aerial_wrapper {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  .university_logo {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 200px;
+    left: 25px;
+  }
+  .content {
+    margin: 0px 20px;
+    position: absolute;
+    top: 370px;
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+      font-family: "Raleway";
+    }
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: "Roboto";
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { Modal } from "semantic-ui-react";
 import Button from "../UI-components/Button";
 import React from "react";
 import fire from "../../fire";
+import Hero from "./Hero";
 import "./TemplateUni.scss";
 
 class TemplateUniversity extends React.Component {
@@ -66,26 +67,11 @@ class TemplateUniversity extends React.Component {
   render() {
     return (
       <div className="uni-page">
-        <h1 className="title">{this.props.name}</h1>
-        <img
-          src={this.props.image}
-          className="university-logo"
-          alt="uni logo"
+        <Hero
+          name={this.props.name}
+          image={this.props.image}
+          cover={this.props.cover}
         />
-        <div
-          className="aerial-wrapper"
-          style={{
-            backgroundImage:
-              "url(" +
-              "https://images.pexels.com/photos/137618/pexels-photo-137618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" +
-              ")",
-          }}
-        ></div>
-        <p className="instructions">
-          Find a mentor you're interested in learning more from and book a
-          virtual coffee chat with them! You can use the filters to help narrow
-          down your search.
-        </p>
 
         <MentorGallery
           selectFunc={this.selectPerson}
@@ -99,7 +85,7 @@ class TemplateUniversity extends React.Component {
         >
           <Modal.Content>
             <div className="img-wrapper">
-              <img src={this.state.person.image} alt="mentor"/>
+              <img src={this.state.person.image} alt="mentor" />
             </div>
             <h1>{this.state.person.name}</h1>
             <p>{this.state.person.story}</p>

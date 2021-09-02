@@ -5,7 +5,7 @@ import "./Landing.scss";
 export default function SignIn() {
   return (
     <div className="cover">
-      <div className="content">
+      <div className="landing_content">
         <h1>
           Deeper Connections
           <br />

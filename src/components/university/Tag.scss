@@ -11,9 +11,18 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5px 15px;
+  margin: 5px 10px;
   cursor: pointer;
   &:hover {
     color: grey;
+  }
+  p {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .tag {
+    width: 100%;
+    margin: 5px 0px;
   }
 }
