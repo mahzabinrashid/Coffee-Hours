@@ -21,4 +21,15 @@
     font-size: 1.3em;
     font-weight: 600;
   }
+  @media only screen and (max-width: 500px) {
+    img {
+      height: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .uni_card {
+    height: auto;
+  }
 }

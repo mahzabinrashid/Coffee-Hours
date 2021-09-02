@@ -4,7 +4,7 @@
       text-decoration: none;
       color: black;
     }
-  
+
     p {
       font-size: 1.5em;
     }
@@ -23,5 +23,11 @@
     padding: 50px;
     width: 80%;
     margin: auto;
+  }
+  @media only screen and (max-width: 500px) {
+    .light_green {
+      width: 95%;
+      padding: 25px;
+    }
   }
 }
