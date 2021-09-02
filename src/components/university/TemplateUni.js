@@ -66,7 +66,7 @@ class TemplateUniversity extends React.Component {
 
   render() {
     return (
-      <div className="uni-page">
+      <div>
         <Hero
           name={this.props.name}
           image={this.props.image}

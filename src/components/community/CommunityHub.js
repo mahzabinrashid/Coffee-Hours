@@ -32,7 +32,7 @@ export default function CommunityHub() {
         .firestore()
         .collection("comments")
         .get()
-        .then((response) => {
+        .then((response, index) => {
           setComments(response.docs);
         });
     });

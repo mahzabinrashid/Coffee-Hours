@@ -6,11 +6,10 @@ export default function Hero(props) {
       <div
         className="aerial_wrapper"
         style={{
-          backgroundImage: "url(" + `${props.cover}` + ")",
+          backgroundImage: `url(${props.cover})`,
         }}
       ></div>
       <div className="content">
-      
         <h1 className="title">{props.name}</h1>
         <p>
           Find a mentor you're interested in learning more from and book a

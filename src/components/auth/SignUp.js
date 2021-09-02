@@ -5,6 +5,7 @@ import { useState } from "react";
 import fire from "../../fire";
 import "./Auth.scss";
 import { Grid } from "@material-ui/core";
+// options for dropdown
 const institutionOptions = [
   {
     key: "uw",
@@ -50,7 +51,7 @@ const educationOptions = [
     text: "Undergraduate",
   },
   {
-    key: "mas",
+    key: "masters",
     value: "Masters",
     text: "Masters",
   },

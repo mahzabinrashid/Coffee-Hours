@@ -13,45 +13,50 @@ import McMasterUniversity from "./pages/universities/McMasterUniversity";
 import BritishColumbia from "./pages/universities/BritishColumbia";
 import Western from "./pages/universities/Western";
 
+const body = {
+  marginTop: "66px",
+};
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Switch>
-        <Route path="/home" exact>
-          <Home />
-        </Route>
-        <Route path="/" exact>
-          <Landing />
-        </Route>
-        <Route path="/signup">
-          <SignUp />
-        </Route>
-        <Route path="/signin">
-          <SignIn />
-        </Route>
-        <Route path="/communityhub">
-          <CommunityHub />
-        </Route>
-        <Route path="/universities/universityofwaterloo">
-          <UniversityOfWaterloo />
-        </Route>
-        <Route path="/universities/universityoftoronto">
-          <UniversityOfToronto />
-        </Route>
-        <Route path="/universities/mcmasteruniversity">
-          <McMasterUniversity />
-        </Route>
-        <Route path="/universities/queensuniversity">
-          <QueensUniversity />
-        </Route>
-        <Route path="/universities/universityofbritishcolumbia">
-          <BritishColumbia />
-        </Route>
-        <Route path="/universities/westernuniversity">
-          <Western />
-        </Route>
-      </Switch>
+      <Navbar />
+      <div style={body}>
+        <Switch>
+          <Route path="/home" exact>
+            <Home />
+          </Route>
+          <Route path="/" exact>
+            <Landing />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
+          </Route>
+          <Route path="/communityhub">
+            <CommunityHub />
+          </Route>
+          <Route path="/universities/universityofwaterloo">
+            <UniversityOfWaterloo />
+          </Route>
+          <Route path="/universities/universityoftoronto">
+            <UniversityOfToronto />
+          </Route>
+          <Route path="/universities/mcmasteruniversity">
+            <McMasterUniversity />
+          </Route>
+          <Route path="/universities/queensuniversity">
+            <QueensUniversity />
+          </Route>
+          <Route path="/universities/universityofbritishcolumbia">
+            <BritishColumbia />
+          </Route>
+          <Route path="/universities/westernuniversity">
+            <Western />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }

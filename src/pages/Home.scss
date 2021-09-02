@@ -5,4 +5,5 @@
 .two-panels {
   display: flex;
   overflow: auto;
+  height: calc(100vh - 66px);
 }
