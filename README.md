@@ -18,7 +18,6 @@ A TechNova 2021 hackathon submission. See our Devpost [here](https://devpost.com
 - React, Semantic-ui, Material-ui
 - Firebase
 - SCSS
-- Figma
 
 
 
