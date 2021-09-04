@@ -51,10 +51,7 @@ export default function CommunityHubGallery() {
           {UniOptions.map((uni) => (
             <Grid item xs={12} md={6} lg={4}>
               <Link to={uni.link}>
-                <UniversityCard
-                  name={uni.name}
-                  logo={uni.logo}
-                />
+                <UniversityCard name={uni.name} logo={uni.logo} />
               </Link>
             </Grid>
           ))}

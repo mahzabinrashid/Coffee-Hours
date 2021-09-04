@@ -9,7 +9,6 @@ export default function Tagbox(props) {
     "🗳️ Politics",
     "🏋️ Fitness",
     "🎶 Music",
-   
   ];
   return (
     <div className="tag_box">
