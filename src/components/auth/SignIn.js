@@ -5,7 +5,6 @@ import { useState } from "react";
 import fire from "../../fire";
 import "./Auth.scss";
 
-
 export default function SignIn() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
