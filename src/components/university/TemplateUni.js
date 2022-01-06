@@ -92,7 +92,7 @@ class TemplateUniversity extends React.Component {
             {this.state.auth ? (
               <div className="button-wrapper">
                 <a
-                  href="https://calendly.com/coffee-hours-mentor/30min"
+                  href="https://calendly.com/coffeehours/30min?month=2022-01"
                   target="_blank"
                   rel="noreferrer"
                 >

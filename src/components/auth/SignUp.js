@@ -130,6 +130,7 @@ export default function SignUp() {
           grade: enteredGrade,
           reasonForJoining: enteredBio,
         });
+        console.log("hi");
         window.location.href = "/home";
       })
       .catch((error) => {
