@@ -130,8 +130,6 @@ export default function SignUp() {
           grade: enteredGrade,
           reasonForJoining: enteredBio,
         });
-        console.log("hi");
-        window.location.href = "/home";
       })
       .catch((error) => {
         if (
@@ -142,6 +140,11 @@ export default function SignUp() {
           setError(error.message);
         }
       });
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        window.location.href = "/home";
+      }
+    });
   };
 
   return (
